@@ -499,7 +499,7 @@
    coreos-installer install --image-url=http://192.168.22.1:8080/ocp4/rhcos --insecure --insecure-ignition --ignition-url=http://192.168.22.1:8080/ocp4/worker.ign /dev/sda
 ```
 
-## Monitor the Bootstrap Process
+**## Monitor the Bootstrap Process**
 
 1. You can monitor the bootstrap process from the ocp-svc host at different log levels (debug, error, info)
 
