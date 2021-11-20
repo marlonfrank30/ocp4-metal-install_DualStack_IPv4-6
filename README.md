@@ -484,9 +484,8 @@
 
    ```bash
    # Bootstrap Node - ocp-bootstrap
-coreos-installer install --image-url=http://192.168.22.1:8080/ocp4/rhcos --insecure --insecure-ignition --ignition-url=http://192.168.22.1:8080/ocp4/bootstrap.ign /dev/sda
+   coreos-installer install --image-url=http://192.168.22.1:8080/ocp4/rhcos --insecure --insecure-ignition --ignition-url=http://192.168.22.1:8080/ocp4/bootstrap.ign /dev/sda
 ```
-
 
    ```bash
    # Each of the Control Plane Nodes - ocp-cp-\#
@@ -497,7 +496,7 @@ coreos-installer install --image-url=http://192.168.22.1:8080/ocp4/rhcos --insec
 
    ```bash
    # Each of the Worker Nodes - ocp-w-\#
-coreos-installer install --image-url=http://192.168.22.1:8080/ocp4/rhcos --insecure --insecure-ignition --ignition-url=http://192.168.22.1:8080/ocp4/worker.ign /dev/sda
+   coreos-installer install --image-url=http://192.168.22.1:8080/ocp4/rhcos --insecure --insecure-ignition --ignition-url=http://192.168.22.1:8080/ocp4/worker.ign /dev/sda
 ```
 
 ## Monitor the Bootstrap Process
