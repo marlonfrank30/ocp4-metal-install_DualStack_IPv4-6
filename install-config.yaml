@@ -3,11 +3,7 @@ kind: Network
 metadata:
   annotations:
     networkoperator.openshift.io/ovn-cluster-initiator: 10.1.10.201
-  creationTimestamp: "2021-11-20T21:18:03Z"
-  generation: 43
-  name: cluster
-  resourceVersion: "25030"
-  uid: 0cbafd15-d804-4c71-abc1-4f3685775a1d
+  name: cluster2
 spec:
   clusterNetwork:
   - cidr: 10.128.0.0/14
