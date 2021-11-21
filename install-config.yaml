@@ -3,7 +3,7 @@ kind: Network
 metadata:
   annotations:
     networkoperator.openshift.io/ovn-cluster-initiator: 10.1.10.201
-  name: cluster2
+  name: cluster
 spec:
   clusterNetwork:
   - cidr: 10.128.0.0/14
