@@ -482,23 +482,23 @@
 
 1. Power on the ocp-bootstrap host and ocp-cp-\# hosts and select 'Tab' to enter boot configuration. Enter the following configuration:
 
+# Bootstrap Node - ocp-bootstrap #
    ```bash
-# Bootstrap Node - ocp-bootstrap
    coreos-installer install --image-url=http://192.168.22.1:8080/ocp4/rhcos --insecure --insecure-ignition --ignition-url=http://192.168.22.1:8080/ocp4/bootstrap.ign /dev/sda
    ```
 
 2. Power on the ocp-w-\# hosts and select 'Tab' to enter boot configuration. Enter the following configuration:
- 
-    ```bash
+
 **   **# # Each of the Control Plane Nodes - ocp-cp\#****   
+    ```bash
    coreos-installer install --image-url=http://192.168.22.1:8080/ocp4/rhcos --insecure --insecure-ignition --ignition-url=http://192.168.22.1:8080/ocp4/master.ign /dev/sda
    ```
    
    
 3. Power on the ocp-w-\# hosts and select 'Tab' to enter boot configuration. Enter the following configuration:
 
+**   **# # Each of the Working Nodes - ocp-w\#****
    ```bash
-**   **# Each of the Worker Nodes - ocp-w-\#****
    coreos-installer install --image-url=http://192.168.22.1:8080/ocp4/rhcos --insecure --insecure-ignition --ignition-url=http://192.168.22.1:8080/ocp4/worker.ign /dev/sda
    ```
 
