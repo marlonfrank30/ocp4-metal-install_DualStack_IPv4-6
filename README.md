@@ -466,7 +466,7 @@
 1. Move the Core OS image to the web server directory (later you need to type this path multiple times so it is a good idea to shorten the name)
 
    ```bash
-   mv ~/rhcos-X.X.X-x86_64-metal.x86_64.raw.gz /var/www/html/ocp4/rhcos
+   mv ~/rhcos-metal.x86_64.raw.gz /var/www/html/ocp4/rhcos
    ```
 
 1. Change ownership and permissions of the web server directory
