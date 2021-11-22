@@ -488,7 +488,7 @@
 
 1. Power on the ocp-bootstrap host and ocp-cp-\# hosts and select 'Tab' to enter boot configuration. Enter the following configuration:
 
-# Bootstrap Node - ocp-bootstrap #
+**   **# # BootStrap Node - ocp-bootstrap\#****
    ```bash
    coreos-installer install --image-url=http://192.168.22.1:8080/ocp4/rhcos --insecure --insecure-ignition --ignition-url=http://192.168.22.1:8080/ocp4/bootstrap.ign /dev/sda
    ```
