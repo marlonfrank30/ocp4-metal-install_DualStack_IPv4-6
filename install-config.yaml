@@ -1,38 +1,24 @@
-apiVersion: operator.openshift.io/v1
-kind: Network
+apiVersion: v1
+baseDomain: ocp.lan
+compute:
+  - hyperthreading: Enabled
+    name: worker
+    replicas: 0 # Must be set to 0 for User Provisioned Installation as worker nodes will be manually deployed.
+controlPlane:
+  hyperthreading: Enabled
+  name: master
+  replicas: 3
 metadata:
-  annotations:
-    networkoperator.openshift.io/ovn-cluster-initiator: 10.1.10.201
-  name: cluster
-spec:
+  name: lab # Cluster name
+networking:
   clusterNetwork:
-  - cidr: 10.128.0.0/14
-    hostPrefix: 23
-  defaultNetwork:
-    ovnKubernetesConfig:
-      genevePort: 6081
-      hybridOverlayConfig:
-        hybridClusterNetwork:
-        - cidr: 10.132.0.0/14
-          hostPrefix: 23
-        hybridOverlayVXLANPort: 9898
-      mtu: 1400
-      policyAuditConfig:
-        destination: "null"
-        maxFileSize: 50
-        rateLimit: 20
-        syslogFacility: local0
-    type: OVNKubernetes
-  deployKubeProxy: false
-  disableMultiNetwork: false
-  disableNetworkDiagnostics: false
-  logLevel: Normal
-  managementState: Managed
-  observedConfig: null
-  operatorLogLevel: Normal
+    - cidr: 10.128.0.0/14
+      hostPrefix: 23
+  networkType: OVNKubernetes
   serviceNetwork:
-  - 172.30.0.0/16
-  unsupportedConfigOverrides: null
-  useMultiNetworkPolicy: false
+    - 172.30.0.0/16
+platform:
+  none: {}
+fips: false
 pullSecret: '{"auths": ...}'
 sshKey: "ssh-ed25519 AAAA..."
