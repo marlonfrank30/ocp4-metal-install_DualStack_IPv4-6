@@ -496,7 +496,7 @@
 2. Power on the ocp-w-\# hosts and select 'Tab' to enter boot configuration. Enter the following configuration:
 
 **   **# # Each of the Control Plane Nodes - ocp-cp\#****   
-    ```bash
+   ```bash
    coreos-installer install --image-url=http://192.168.22.1:8080/ocp4/rhcos --insecure --insecure-ignition --ignition-url=http://192.168.22.1:8080/ocp4/master.ign /dev/sda
    ```
    
