@@ -438,7 +438,7 @@
 1. Copy a new file named cluster-network-03-config.yml and save it in ~/ocp-install/manifests/
 
    ```bash
-   cp ~/ocp4-metal-install/cluster-network-03-config.yml ~/ocp-install/manifest/
+   cp ~/ocp4-metal-install/cluster-network-03-config.yml ~/ocp-install/manifests/
    ```
 
    > A warning is shown about making the control plane nodes schedulable. It is up to you if you want to run workloads on the Control Plane nodes. If you dont want to you can disable this with:
