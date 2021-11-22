@@ -486,14 +486,14 @@
 
 ## Deploy OpenShift
 
-1. Power on the ocp-bootstrap host and ocp-cp-\# hosts and select 'Tab' to enter boot configuration. Enter the following configuration:
+1. Power on the ocp-bootstrap host and ocp-cp-\# hosts to enter boot configuration. Enter the following configuration:
 
 **   **# # BootStrap Node - ocp-bootstrap\#****
    ```bash
    coreos-installer install --image-url=http://192.168.22.1:8080/ocp4/rhcos --insecure --insecure-ignition --ignition-url=http://192.168.22.1:8080/ocp4/bootstrap.ign /dev/sda
    ```
 
-2. Power on the ocp-w-\# hosts and select 'Tab' to enter boot configuration. Enter the following configuration:
+2. Power on the ocp-w-\# hosts to enter boot configuration. Enter the following configuration:
 
 **   **# # Each of the Control Plane Nodes - ocp-cp\#****   
    ```bash
@@ -501,7 +501,7 @@
    ```
    
    
-3. Power on the ocp-w-\# hosts and select 'Tab' to enter boot configuration. Enter the following configuration:
+3. Power on the ocp-w-\# hosts to enter boot configuration. Enter the following configuration:
 
 **   **# # Each of the Working Nodes - ocp-w\#****
    ```bash
