@@ -432,7 +432,7 @@
 1. Copy a new file named cluster-network-03-config.yml and save it in ~/ocp-install/manifest/
 
    ```bash
-cp ~/ocp4-metal-install/cluster-network-03-config.yml ~/ocp-install/manifest/
+   cp ~/ocp4-metal-install/cluster-network-03-config.yml ~/ocp-install/manifest/
    ```
 
 1. Generate Kubernetes manifest files
