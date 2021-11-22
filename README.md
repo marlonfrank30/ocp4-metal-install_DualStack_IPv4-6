@@ -428,8 +428,12 @@
    ```bash
    vim ~/ocp-install/install-config.yaml
    ```
-cp ~/ocp4-metal-install/install-config.yaml ~/ocp-install
-create a new file named cluster-network-03-config.yml and save it in ~/ocp-install/manifest/
+
+1. Create a new file named cluster-network-03-config.yml and save it in ~/ocp-install/manifest/
+
+   ```bash
+cp ~/ocp4-metal-install/cluster-network-03-config.yml ~/ocp-install/manifest/
+   ```
 
 
 apiVersion: operator.openshift.io/v1
