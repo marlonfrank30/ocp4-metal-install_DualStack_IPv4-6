@@ -435,7 +435,7 @@
    ~/openshift-install create manifests --dir ~/ocp-install
    ```
 
-1. Copy a new file named cluster-network-03-config.yml and save it in ~/ocp-install/manifest/
+1. Copy a new file named cluster-network-03-config.yml and save it in ~/ocp-install/manifests/
 
    ```bash
    cp ~/ocp4-metal-install/cluster-network-03-config.yml ~/ocp-install/manifest/
