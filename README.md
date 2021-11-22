@@ -429,25 +429,11 @@
    vim ~/ocp-install/install-config.yaml
    ```
 
-1. Create a new file named cluster-network-03-config.yml and save it in ~/ocp-install/manifest/
+1. Copy a new file named cluster-network-03-config.yml and save it in ~/ocp-install/manifest/
 
    ```bash
 cp ~/ocp4-metal-install/cluster-network-03-config.yml ~/ocp-install/manifest/
    ```
-
-
-apiVersion: operator.openshift.io/v1
-kind: Network
-metadata:
-  name: cluster
-spec:
-  defaultNetwork:
-    ovnKubernetesConfig:
-      hybridOverlayConfig:
-        hybridClusterNetwork: 
-        - cidr: 10.132.0.0/14
-          hostPrefix: 23
-        hybridOverlayVXLANPort: 9898
 
 1. Generate Kubernetes manifest files
 
