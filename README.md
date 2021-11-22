@@ -429,16 +429,16 @@
    vim ~/ocp-install/install-config.yaml
    ```
 
-1. Copy a new file named cluster-network-03-config.yml and save it in ~/ocp-install/manifest/
-
-   ```bash
-   cp ~/ocp4-metal-install/cluster-network-03-config.yml ~/ocp-install/manifest/
-   ```
-
 1. Generate Kubernetes manifest files
 
    ```bash
    ~/openshift-install create manifests --dir ~/ocp-install
+   ```
+
+1. Copy a new file named cluster-network-03-config.yml and save it in ~/ocp-install/manifest/
+
+   ```bash
+   cp ~/ocp4-metal-install/cluster-network-03-config.yml ~/ocp-install/manifest/
    ```
 
    > A warning is shown about making the control plane nodes schedulable. It is up to you if you want to run workloads on the Control Plane nodes. If you dont want to you can disable this with:
