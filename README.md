@@ -184,11 +184,8 @@
    firewall-cmd --zone=external --add-masquerade --permanent
    firewall-cmd --zone=internal --add-masquerade --permanent
    ```
-
-   ```diff
-   -
+ 
     Set allow all for lab environments where security is not a concern allow all inbound and outbound flow (skip more specific fw ports in the upcoming sessions below).
-   ```
  
    ```bash
    sudo firewall-cmd --zone=external --add-rich-rule='rule family="ipv4" source address="0.0.0.0/0" accept' --permanent
