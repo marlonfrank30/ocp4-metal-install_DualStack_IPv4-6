@@ -185,6 +185,13 @@
    firewall-cmd --zone=internal --add-masquerade --permanent
    ```
 
+   Set allow all for lab environments 
+for lab environments where security is not a concern allow all inbound and outbound flow (skip more specific fw ports below).
+
+   ```bash
+   sudo firewall-cmd --zone=external --add-rich-rule='rule family="ipv4" source address="0.0.0.0/0" accept' --permanent
+   sudo firewall-cmd --zone=internal --add-rich-rule='rule family="ipv4" source address="0.0.0.0/0" accept' --permanent
+   ```
    Reload firewall config
 
    ```bash
@@ -197,6 +204,7 @@
    firewall-cmd --list-all --zone=internal
    firewall-cmd --list-all --zone=external
    ```
+
 
    When masquerading is enabled so is ip forwarding which basically makes this host a router. Check:
 
