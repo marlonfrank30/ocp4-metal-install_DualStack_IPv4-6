@@ -186,6 +186,7 @@
    ```
 
    ```diff
+   -
     Set allow all for lab environments where security is not a concern allow all inbound and outbound flow (skip more specific fw ports in the upcoming sessions below).
    ```
  
