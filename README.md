@@ -186,7 +186,7 @@
    ```
 
    Set allow all for lab environments 
-for lab environments where security is not a concern allow all inbound and outbound flow (skip more specific fw ports below).
+where security is not a concern allow all inbound and outbound flow (skip more specific fw ports below).
 
    ```bash
    sudo firewall-cmd --zone=external --add-rich-rule='rule family="ipv4" source address="0.0.0.0/0" accept' --permanent
