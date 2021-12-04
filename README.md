@@ -686,3 +686,11 @@
    ```bash
    oc edit schedulers.config.openshift.io cluster
    ```
+
+
+1. Create a persistent mount volume to be used by projects
+   ```bash
+   oc apply -f https://openebs.github.io/charts/openebs-operator.yaml
+   oc adm policy add-scc-to-user privileged -z openebs-maya-operator -n openebs
+   oc adm policy add-scc-to-group anyuid system:serviceaccounts:openebs
+   ```   
