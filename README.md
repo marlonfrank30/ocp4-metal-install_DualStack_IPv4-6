@@ -23,7 +23,7 @@
 ## Download Software
 
 1. Download [CentOS 8 x86_64 image](https://www.centos.org/centos-linux/)
-1. Login to [RedHat OpenShift Cluster Manager](https://cloud.redhat.com/openshift) [RedHat OpenShift Cluster Manager](https://mirror.openshift.com/pub/openshift-v4/clients/ocp/?extIdCarryOver=true%E2%89%BBcid=701f2000001Css0AAC)
+1. Login to [RedHat OpenShift Cluster Manager](https://cloud.redhat.com/openshift) [RedHat OpenShift Spec Version](https://mirror.openshift.com/pub/openshift-v4/clients/ocp/?extIdCarryOver=true%E2%89%BBcid=701f2000001Css0AAC)
 1. Select 'Create Cluster' from the 'Clusters' navigation menu
 1. Select 'RedHat OpenShift Container Platform'
 1. Select 'Run on Bare Metal'
