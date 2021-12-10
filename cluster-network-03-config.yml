@@ -6,16 +6,13 @@ spec:
   clusterNetwork:
   - cidr: 10.128.0.0/14
     hostPrefix: 23
+  - cidr: fd01::/48
+    hostPrefix: 64
   externalIP:
     policy: {}
   networkType: OVNKubernetes
   serviceNetwork:
   - 172.30.0.0/16
+  - fd02::/112
 status:
-  clusterNetwork:
-  - cidr: 10.128.0.0/14
-    hostPrefix: 23
-  clusterNetworkMTU: 1400
-  networkType: OVNKubernetes
-  serviceNetwork:
-  - 172.30.0.0/16
+
