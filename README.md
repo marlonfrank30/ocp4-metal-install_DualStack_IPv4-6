@@ -688,7 +688,7 @@
    ```
 
 
-1. Create a persistent volume mountto be used by projects
+1. Create a persistent volume mount to be used by projects
    ```bash
    oc apply -f https://openebs.github.io/charts/openebs-operator.yaml
    oc adm policy add-scc-to-user privileged -z openebs-maya-operator -n openebs
