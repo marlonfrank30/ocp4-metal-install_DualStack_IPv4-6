@@ -365,6 +365,11 @@
    systemctl start haproxy
    systemctl status haproxy
    ```
+   if security is not a concern in your lab environment disable SELinux altogether with the following command
+   ```bash
+   setenforce 0
+   sed -i --follow-symlinks 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
+   ```
 
 1. Install and configure NFS for the OpenShift Registry. It is a requirement to provide storage for the Registry, emptyDir can be specified if necessary.
 
