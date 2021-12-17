@@ -582,6 +582,8 @@
    oc get csr -o go-template='{{range .items}}{{if not .status}}{{.metadata.name}}{{"\n"}}{{end}}{{end}}' | xargs oc adm certificate approve
    # Wait for kubelet-serving CSRs and approve them too with the same command
    oc get csr -o go-template='{{range .items}}{{if not .status}}{{.metadata.name}}{{"\n"}}{{end}}{{end}}' | xargs oc adm certificate approve
+   #or alternatively
+   while true ; do oc get csr -o go-template='{{range .items}}{{if not .status}}{{.metadata.name}}{{"\n"}}{{end}}{{end}}' | xargs oc adm certificate approve ; sleep 5 ; done
    ```
 
 1. Watch and wait for the Worker Nodes to join the cluster and enter a 'Ready' status
