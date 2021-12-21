@@ -502,14 +502,14 @@
 
 **   **# # BootStrap Node - ocp-bootstrap\#****
    ```bash
-   coreos-installer install --image-url=http://192.168.22.1:8080/ocp4/rhcos --insecure --insecure-ignition --ignition-url=http://192.168.22.1:8080/ocp4/bootstrap.ign /dev/sda
+   coreos-installer install --image-url=http://192.168.22.1:8080/ocp4/rhcos --insecure --insecure-ignition --ignition-url=http://192.168.22.1:8080/ocp4/bootstrap.ign /dev/sda --copy-network
    ```
 
 2. Power on the ocp-w-\# hosts to enter boot configuration. Enter the following configuration:
 
 **   **# # Each of the Control Plane Nodes - ocp-cp\#****   
    ```bash
-   coreos-installer install --image-url=http://192.168.22.1:8080/ocp4/rhcos --insecure --insecure-ignition --ignition-url=http://192.168.22.1:8080/ocp4/master.ign /dev/sda
+   coreos-installer install --image-url=http://192.168.22.1:8080/ocp4/rhcos --insecure --insecure-ignition --ignition-url=http://192.168.22.1:8080/ocp4/master.ign /dev/sda --copy-network
    ```
    
    
@@ -517,7 +517,7 @@
 
 **   **# # Each of the Working Nodes - ocp-w\#****
    ```bash
-   coreos-installer install --image-url=http://192.168.22.1:8080/ocp4/rhcos --insecure --insecure-ignition --ignition-url=http://192.168.22.1:8080/ocp4/worker.ign /dev/sda
+   coreos-installer install --image-url=http://192.168.22.1:8080/ocp4/rhcos --insecure --insecure-ignition --ignition-url=http://192.168.22.1:8080/ocp4/worker.ign /dev/sda --copy-network
    ```
    
 4. boot all the worker nodes, master nodes as well as bootstrap nodes.
