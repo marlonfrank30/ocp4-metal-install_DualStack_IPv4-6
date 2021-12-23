@@ -24,14 +24,3 @@ $TTL    604800
 27     IN    PTR    worker4.cluster.ocp.local.
 28     IN    PTR    worker5.cluster.ocp.local.
 29     IN    PTR    worker7.cluster.ocp.local.
-;
-30     IN    PTR    ocp-bootstrap.beta.ocp.local.
-31     IN    PTR    leader1.beta.ocp.local.
-32     IN    PTR    leader2.beta.ocp.local.
-33     IN    PTR    leader3.beta.ocp.local.
-34     IN    PTR    worker1.beta.ocp.local.
-35     IN    PTR    worker2.beta.ocp.local.
-36     IN    PTR    worker3.beta.ocp.local.
-37     IN    PTR    worker4.beta.ocp.local.
-38     IN    PTR    worker5.beta.ocp.local.
-39     IN    PTR    worker7.beta.ocp.local.
