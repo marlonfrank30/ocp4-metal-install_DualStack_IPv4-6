@@ -1,6 +1,6 @@
 $TTL    604800
 @       IN      SOA     ocp-svc.ocp.local. contact.ocp.local (
-                 21     ; Serial
+                 22     ; Serial
              604800     ; Refresh
               86400     ; Retry
             2419200     ; Expire
@@ -13,23 +13,23 @@ podman.ocp.local.                       IN      A        10.1.10.1
 
 ; Temp Bootstrap Node
 ocp-bootstrap.cluster.ocp.local.        IN      A         10.1.10.20
-ocp-bootstrap.cluster.ocp.local.        IN      AAAA      2601:680:c200:44e1::20
+ocp-bootstrap.cluster.ocp.local.        IN      AAAA      fd00::20
 ocp-bootstrap.beta.ocp.local.           IN      A         10.1.10.30
-ocp-bootstrap.beta.ocp.local.           IN      AAAA      2601:680:c200:44e1::30
+ocp-bootstrap.beta.ocp.local.           IN      AAAA      fd00::30
 
 ; Control Plane Nodes
 leader1.cluster.ocp.local.              IN      A         10.1.10.21
 leader2.cluster.ocp.local.              IN      A         10.1.10.22
 leader3.cluster.ocp.local.              IN      A         10.1.10.23
-leader1.cluster.ocp.local.              IN      AAAA      2601:680:c200:44e1::21
-leader2.cluster.ocp.local.              IN      AAAA      2601:680:c200:44e1::22
-leader3.cluster.ocp.local.              IN      AAAA      2601:680:c200:44e1::23
+leader1.cluster.ocp.local.              IN      AAAA      fd00::21
+leader2.cluster.ocp.local.              IN      AAAA      fd00::22
+leader3.cluster.ocp.local.              IN      AAAA      fd00::23
 leader1.beta.ocp.local.                 IN      A         10.1.10.31
 leader2.beta.ocp.local.                 IN      A         10.1.10.32
 leader3.beta.ocp.local.                 IN      A         10.1.10.33
-leader1.beta.ocp.local.                 IN      AAAA      2601:680:c200:44e1::31
-leader2.beta.ocp.local.                 IN      AAAA      2601:680:c200:44e1::32
-leader3.beta.ocp.local.                 IN      AAAA      2601:680:c200:44e1::33
+leader1.beta.ocp.local.                 IN      AAAA      fd00::31
+leader2.beta.ocp.local.                 IN      AAAA      fd00::32
+leader3.beta.ocp.local.                 IN      AAAA      fd00::33
 
 
 ; Worker Nodes
@@ -39,25 +39,12 @@ worker3.cluster.ocp.local.              IN      A         10.1.10.26
 worker4.cluster.ocp.local.              IN      A         10.1.10.27
 worker5.cluster.ocp.local.              IN      A         10.1.10.28
 worker6.cluster.ocp.local.              IN      A         10.1.10.29
-worker1.cluster.ocp.local.              IN      AAAA      2601:680:c200:44e1::24
-worker2.cluster.ocp.local.              IN      AAAA      2601:680:c200:44e1::25
-worker3.cluster.ocp.local.              IN      AAAA      2601:680:c200:44e1::26
-worker4.cluster.ocp.local.              IN      AAAA      2601:680:c200:44e1::27
-worker5.cluster.ocp.local.              IN      AAAA      2601:680:c200:44e1::28
-worker6.cluster.ocp.local.              IN      AAAA      2601:680:c200:44e1::29
-worker1.beta.ocp.local.                 IN      A         10.1.10.34
-worker2.beta.ocp.local.                 IN      A         10.1.10.35
-worker3.beta.ocp.local.                 IN      A         10.1.10.36
-worker4.beta.ocp.local.                 IN      A         10.1.10.37
-worker5.beta.ocp.local.                 IN      A         10.1.10.38
-worker6.beta.ocp.local.                 IN      A         10.1.10.39
-worker1.beta.ocp.local.                 IN      AAAA      2601:680:c200:44e1::34
-worker2.beta.ocp.local.                 IN      AAAA      2601:680:c200:44e1::35
-worker3.beta.ocp.local.                 IN      AAAA      2601:680:c200:44e1::36
-worker4.beta.ocp.local.                 IN      AAAA      2601:680:c200:44e1::37
-worker5.beta.ocp.local.                 IN      AAAA      2601:680:c200:44e1::38
-worker6.beta.ocp.local.                 IN      AAAA      2601:680:c200:44e1::39
-
+worker1.cluster.ocp.local.              IN      AAAA      fd00::24
+worker2.cluster.ocp.local.              IN      AAAA      fd00::25
+worker3.cluster.ocp.local.              IN      AAAA      fd00::26
+worker4.cluster.ocp.local.              IN      AAAA      fd00::27
+worker5.cluster.ocp.local.              IN      AAAA      fd00::28
+worker6.cluster.ocp.local.              IN      AAAA      fd00::29
 
 
 ; OpenShift Internal - Load balancer
@@ -70,15 +57,15 @@ api-int.cluster.ocp.local.              IN      A         10.1.10.1
 etcd-0.cluster.ocp.local.               IN      A         10.1.10.21
 etcd-1.cluster.ocp.local.               IN      A         10.1.10.22
 etcd-2.cluster.ocp.local.               IN      A         10.1.10.23
-etcd-0.cluster.ocp.local.               IN      AAAA      2601:680:c200:44e1::21
-etcd-1.cluster.ocp.local.               IN      AAAA      2601:680:c200:44e1::22
-etcd-2.cluster.ocp.local.               IN      AAAA      2601:680:c200:44e1::23
+etcd-0.cluster.ocp.local.               IN      AAAA      fd00::21
+etcd-1.cluster.ocp.local.               IN      AAAA      fd00::22
+etcd-2.cluster.ocp.local.               IN      AAAA      fd00::23
 etcd-0.beta.ocp.local.                  IN      A         10.1.10.31
 etcd-1.beta.ocp.local.                  IN      A         10.1.10.32
 etcd-2.beta.ocp.local.                  IN      A         10.1.10.33
-etcd-0.beta.ocp.local.                  IN      AAAA      2601:680:c200:44e1::31
-etcd-1.beta.ocp.local.                  IN      AAAA      2601:680:c200:44e1::32
-etcd-2.beta.ocp.local.                  IN      AAAA      2601:680:c200:44e1::33
+etcd-0.beta.ocp.local.                  IN      AAAA      fd00::31
+etcd-1.beta.ocp.local.                  IN      AAAA      fd00::32
+etcd-2.beta.ocp.local.                  IN      AAAA      fd00::33
 
 ; OpenShift Internal SRV records (cluster name = cluster)
 _etcd-server-ssl._tcp.cluster.ocp.local.    86400     IN    SRV     0    10    2380    etcd-0.cluster
@@ -91,3 +78,5 @@ _etcd-server-ssl._tcp.beta.ocp.local.       86400     IN    SRV     0    10    2
 oauth-openshift.apps.cluster.ocp.local.               IN     A        10.1.10.1
 console-openshift-console.apps.cluster.ocp.local.     IN     A        10.1.10.1
 
+
+#/64 equivalent of /24   fd00:0000:0000:0000:     0000:0000:0000:0020:
