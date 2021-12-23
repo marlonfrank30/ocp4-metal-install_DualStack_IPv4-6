@@ -7,7 +7,7 @@ $TTL    604800
              604800     ; Minimum
 )
 
-$ORIGIN 1.e.4.4.0.0.2.c.0.8.6.0.1.0.6.2.ip6.arpa.
+$ORIGIN 0.0.0.0.0.0.0.0.0.0.0.0.0.0.d.f.ip6.arpa.
 
   IN      NS      ocp-svc.ocp.local.
 
@@ -27,14 +27,3 @@ $ORIGIN 1.e.4.4.0.0.2.c.0.8.6.0.1.0.6.2.ip6.arpa.
 27.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0 PTR     worker4.cluster.ocp.local.
 28.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0 PTR     worker5.cluster.ocp.local.
 29.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0 PTR     worker6.cluster.ocp.local.
-;
-30.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0 PTR     ocp-bootstrap.beta.ocp.local.
-31.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0 PTR     leader1.beta.ocp.local.
-32.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0 PTR     leader2.beta.ocp.local.
-33.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0 PTR     leader3.beta.ocp.local.
-34.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0 PTR     worker1.beta.ocp.local.
-35.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0 PTR     worker2.beta.ocp.local.
-36.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0 PTR     worker3.beta.ocp.local.
-37.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0 PTR     worker4.beta.ocp.local.
-38.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0 PTR     worker5.beta.ocp.local.
-39.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0 PTR     worker6.beta.ocp.local.
