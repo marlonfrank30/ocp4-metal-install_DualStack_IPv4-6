@@ -234,8 +234,8 @@
    Apply configuration
 
    ```bash
-   \cp ~/ocp4-metal-install/dns/named.conf /etc/named.conf
-   cp -R ~/ocp4-metal-install/dns/zones /etc/named/
+   \cp ~/ocp4-metal-install_DualStack_IPv4-6/dns/named.conf /etc/named.conf
+   cp -R ~/ocp4-metal-install_DualStack_IPv4-6/dns/zones /etc/named/
    ```
 
    Configure the firewall for DNS
