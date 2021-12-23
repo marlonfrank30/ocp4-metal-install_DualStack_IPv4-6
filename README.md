@@ -350,7 +350,7 @@
    Copy HAProxy config
 
    ```bash
-   \cp ~/ocp4-metal-install/haproxy.cfg /etc/haproxy/haproxy.cfg
+   \cp ~/ocp4-metal-install_DualStack_IPv4-6/haproxy.cfg /etc/haproxy/haproxy.cfg
    ```
 
    Configure the Firewall
