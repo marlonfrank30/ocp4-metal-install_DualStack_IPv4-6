@@ -441,7 +441,7 @@
 1. Copy the install-config.yaml included in the clones repository to the install directory
 
    ```bash
-   cp ~/ocp4-metal-install/install-config.yaml ~/ocp-install
+   cp ~/ocp4-metal-install_DualStack_IPv4-6/install-config.yaml ~/ocp-install
    ```
 
 1. Update the install-config.yaml with your own pull-secret and ssh key.
@@ -450,7 +450,7 @@
    - Line 24 should contain the contents of your '~/.ssh/id_rsa.pub'
 
    ```bash
-   vim ~/ocp-install/install-config.yaml
+   vim ~/ocp4-metal-install_DualStack_IPv4-6/install-config.yaml
    ```
 
 1. Generate Kubernetes manifest files
@@ -462,7 +462,7 @@
 1. Copy a new file named cluster-network-03-config.yml and save it in ~/ocp-install/manifests/
 
    ```bash
-   cp ~/ocp4-metal-install/cluster-network-03-config.yml ~/ocp-install/manifests/
+   cp ~/ocp4-metal-install_DualStack_IPv4-6/cluster-network-03-config.yml ~/ocp-install/manifests/
    ```
 
    > A warning is shown about making the control plane nodes schedulable. It is up to you if you want to run workloads on the Control Plane nodes. If you dont want to you can disable this with:
@@ -635,7 +635,7 @@
 1. Create the persistent volume for the 'image-registry-storage' pvc to bind to
 
    ```bash
-   oc create -f ~/ocp4-metal-install/manifest/registry-pv.yaml
+   oc create -f ~/ocp4-metal-install_DualStack_IPv4-6/manifest/registry-pv.yaml
    ```
 
 1. After a short wait the 'image-registry-storage' pvc should now be bound
@@ -648,10 +648,10 @@
 
 1. Apply the `oauth-htpasswd.yaml` file to the cluster
 
-   > This will create a user 'admin' with the password 'password'. To set a different username and password substitue the htpasswd key in the '~/ocp4-metal-install/manifest/oauth-htpasswd.yaml' file with the output of `htpasswd -n -B -b <username> <password>`
+   > This will create a user 'admin' with the password 'password'. To set a different username and password substitue the htpasswd key in the '~/ocp4-metal-install_DualStack_IPv4-6/manifest/oauth-htpasswd.yaml' file with the output of `htpasswd -n -B -b <username> <password>`
 
    ```bash
-   oc apply -f ~/ocp4-metal-install/manifest/oauth-htpasswd.yaml
+   oc apply -f ~/ocp4-metal-install_DualStack_IPv4-6/manifest/oauth-htpasswd.yaml
    ```
 
 1. Assign the new user (admin) admin permissions
