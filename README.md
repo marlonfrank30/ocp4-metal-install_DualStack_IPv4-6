@@ -381,6 +381,9 @@
    ```bash
    setenforce 0
    sed -i --follow-symlinks 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
+   systemctl enable haproxy
+   systemctl start haproxy
+   systemctl status haproxy
    ```
 
 1. Install and configure NFS for the OpenShift Registry. It is a requirement to provide storage for the Registry, emptyDir can be specified if necessary.
