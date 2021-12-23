@@ -120,7 +120,7 @@
 1. Update CentOS so we get the latest packages for each of the services we are about to install
 
    ```bash
-   dnf update
+   dnf update -y
    ```
 
 1. Install Git
