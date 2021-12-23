@@ -155,7 +155,7 @@
 
    - **Address**: 10.1.10.1
    - **DNS Server**: 127.0.0.1
-   - **Search domain**: ocp.lan
+   - **Search domain**: ocp.local
    - Never use this network for default route
    - Automatically connect
 
@@ -163,9 +163,9 @@
 
 1. Set a Static IPv6 for OCP network interface `nmtui-edit ens224` or edit `/etc/sysconfig/network-scripts/ifcfg-ens224`
 
-   - **Address**: 2601:680:c200:44e1::1/64
+   - **Address**: fd00::1/64
    - **DNS Server**: ::1
-   - **Search domain**: ocp.lan
+   - **Search domain**: ocp.local
    - Never use this network for default route
    - Automatically connect
 
