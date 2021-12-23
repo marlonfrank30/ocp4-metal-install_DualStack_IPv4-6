@@ -1,6 +1,6 @@
 $TTL    604800
 @       IN      SOA     ocp-svc.ocp.local. contact.ocp.local (
-                 21     ; Serial
+         2021122300     ; Serial
              604800     ; Refresh
               86400     ; Retry
             2419200     ; Expire
