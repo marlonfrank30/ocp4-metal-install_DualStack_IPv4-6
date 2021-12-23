@@ -272,7 +272,7 @@
    ```bash
    dig ocp.lan
    # The following should return the answer ocp-bootstrap.lab.ocp.lan from the local server
-   dig -x 192.168.22.20
+   dig -x 10.1.10.20
    ```
 
 1. Install & configure DHCP
