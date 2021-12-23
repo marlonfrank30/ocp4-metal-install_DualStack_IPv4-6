@@ -151,9 +151,9 @@
    export KUBE_EDITOR="vim"
    ```
 
-1. Set a Static IP for OCP network interface `nmtui-edit ens224` or edit `/etc/sysconfig/network-scripts/ifcfg-ens224`
+1. Set a Static IPv4 for OCP network interface `nmtui-edit ens224` or edit `/etc/sysconfig/network-scripts/ifcfg-ens224`
 
-   - **Address**: 192.168.22.1
+   - **Address**: 10.1.10.5
    - **DNS Server**: 127.0.0.1
    - **Search domain**: ocp.lan
    - Never use this network for default route
@@ -161,6 +161,15 @@
 
    > If changes arent applied automatically you can bounce the NIC with `nmcli connection down ens224` and `nmcli connection up ens224`
 
+1. Set a Static IPv6 for OCP network interface `nmtui-edit ens224` or edit `/etc/sysconfig/network-scripts/ifcfg-ens224`
+
+   - **Address**: 2601:680:c200:44e1::5/64
+   - **DNS Server**: ::1
+   - **Search domain**: ocp.lan
+   - Never use this network for default route
+   - Automatically connect
+
+   > If changes arent applied automatically you can bounce the NIC with `nmcli connection down ens224` and `nmcli connection up ens224`
 1. Setup firewalld
 
    Create **internal** and **external** zones
