@@ -681,7 +681,7 @@
    sudo vi /etc/hosts
 
    # Append the following entries:
-   192.168.0.96 ocp-svc api.lab.ocp.local console-openshift-console.apps.lab.ocp.local oauth-openshift.apps.lab.ocp.local downloads-openshift-console.apps.lab.ocp.local alertmanager-main-openshift-monitoring.apps.lab.ocp.local grafana-openshift-monitoring.apps.lab.ocp.local prometheus-k8s-openshift-monitoring.apps.lab.ocp.local thanos-querier-openshift-monitoring.apps.lab.ocp.local
+   192.168.0.70 ocp-svc api.lab.ocp.local console-openshift-console.apps.lab.ocp.local oauth-openshift.apps.lab.ocp.local downloads-openshift-console.apps.lab.ocp.local alertmanager-main-openshift-monitoring.apps.lab.ocp.local grafana-openshift-monitoring.apps.lab.ocp.local prometheus-k8s-openshift-monitoring.apps.lab.ocp.local thanos-querier-openshift-monitoring.apps.lab.ocp.local
    ```
 
 1. Navigate to the [OpenShift Console URL](https://console-openshift-console.apps.lab.ocp.local) and log in as the 'admin' user
