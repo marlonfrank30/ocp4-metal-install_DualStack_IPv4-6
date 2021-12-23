@@ -404,7 +404,7 @@
    Export the Share
 
    ```bash
-   echo "/shares/registry  192.168.22.0/24(rw,sync,root_squash,no_subtree_check,no_wdelay)" > /etc/exports
+   echo "/shares/registry  10.1.10.0/24(rw,sync,root_squash,no_subtree_check,no_wdelay)" > /etc/exports
    exportfs -rv
    ```
 
