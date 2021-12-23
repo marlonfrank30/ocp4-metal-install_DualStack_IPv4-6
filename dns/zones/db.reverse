@@ -1,23 +1,39 @@
 $TTL    604800
-@       IN      SOA     ocp-svc.ocp.lan. contact.ocp.lan (
-                  1     ; Serial
+@       IN      SOA     ocp-svc.ocp.local. contact.ocp.local (
+                 21     ; Serial
              604800     ; Refresh
               86400     ; Retry
             2419200     ; Expire
              604800     ; Minimum
 )
 
-  IN      NS      ocp-svc.ocp.lan.
+  IN      NS      ocp-svc.ocp.local.
 
-1      IN    PTR    ocp-svc.ocp.lan.
-1      IN    PTR    api.lab.ocp.lan.
-1      IN    PTR    api-int.lab.ocp.lan.
+5      IN    PTR    ocp-svc.ocp.local.
+5      IN    PTR    podman.ocp.local.
+5      IN    PTR    api.cluster.ocp.local.
+5      IN    PTR    api-int.cluster.ocp.local.
+6      IN    PTR    api.beta.ocp.local.
+6      IN    PTR    api-int.beta.ocp.local.
 ;
-200    IN    PTR    ocp-bootstrap.lab.ocp.lan.
+20     IN    PTR    ocp-bootstrap.cluster.ocp.local.
+21     IN    PTR    leader1.cluster.ocp.local.
+22     IN    PTR    leader2.cluster.ocp.local.
+23     IN    PTR    leader3.cluster.ocp.local.
+24     IN    PTR    worker1.cluster.ocp.local.
+25     IN    PTR    worker2.cluster.ocp.local.
+26     IN    PTR    worker3.cluster.ocp.local.
+27     IN    PTR    worker4.cluster.ocp.local.
+28     IN    PTR    worker5.cluster.ocp.local.
+29     IN    PTR    worker7.cluster.ocp.local.
 ;
-201    IN    PTR    ocp-cp-1.lab.ocp.lan.
-202    IN    PTR    ocp-cp-2.lab.ocp.lan.
-203    IN    PTR    ocp-cp-3.lab.ocp.lan.
-;
-211    IN    PTR    ocp-w-1.lab.ocp.lan.
-212    IN    PTR    ocp-w-2.lab.ocp.lan.
+30     IN    PTR    ocp-bootstrap.beta.ocp.local.
+31     IN    PTR    leader1.beta.ocp.local.
+32     IN    PTR    leader2.beta.ocp.local.
+33     IN    PTR    leader3.beta.ocp.local.
+34     IN    PTR    worker1.beta.ocp.local.
+35     IN    PTR    worker2.beta.ocp.local.
+36     IN    PTR    worker3.beta.ocp.local.
+37     IN    PTR    worker4.beta.ocp.local.
+38     IN    PTR    worker5.beta.ocp.local.
+39     IN    PTR    worker7.beta.ocp.local.
