@@ -286,7 +286,7 @@
    Edit dhcpd.conf from the cloned git repo to have the correct mac address for each host and copy the conf file to the correct location for the DHCP service to use
 
    ```bash
-   \cp ~/ocp4-metal-install/dhcpd.conf /etc/dhcp/dhcpd.conf
+   \cp ~/ocp4-metal-install_DualStack_IPv4-6/dhcpd.conf /etc/dhcp/dhcpd.conf
    ```
 
    Configure the Firewall
