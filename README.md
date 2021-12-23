@@ -220,6 +220,7 @@
 
    ```bash
    cat /proc/sys/net/ipv4/ip_forward
+   sysctl net/ipv6/conf/all/forwarding=1
    ```
 
 1. Install and configure BIND DNS
