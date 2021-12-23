@@ -253,7 +253,7 @@
    systemctl status named
    ```
 
-   > At the moment DNS will still be pointing to the LAN DNS server. You can see this by testing with `dig ocp.lan`.
+   > At the moment DNS will still be pointing to the LAN DNS server. You can see this by testing with `dig ocp.local`.
 
    Change the LAN nic (ens192) to use 127.0.0.1 for ipv4 DNS and ::1 for ipv6 DNs AND ensure `Ignore automatically Obtained DNS parameters` is ticked
 
@@ -270,8 +270,8 @@
    Confirm dig now sees the correct DNS results by using the DNS Server running locally
 
    ```bash
-   dig ocp.lan
-   # The following should return the answer ocp-bootstrap.lab.ocp.lan from the local server
+   dig ocp.local
+   # The following should return the answer ocp-bootstrap.lab.ocp.local from the local server
    dig -x 10.1.10.20
    ```
 
@@ -671,17 +671,17 @@
 1. Append the following to your local workstations `/etc/hosts` file:
 
    > From your local workstation
-   > If you do not want to add an entry for each new service made available on OpenShift you can configure the ocp-svc DNS server to serve externally and create a wildcard entry for \*.apps.lab.ocp.lan
+   > If you do not want to add an entry for each new service made available on OpenShift you can configure the ocp-svc DNS server to serve externally and create a wildcard entry for \*.apps.lab.ocp.local
 
    ```bash
    # Open the hosts file
    sudo vi /etc/hosts
 
    # Append the following entries:
-   192.168.0.96 ocp-svc api.lab.ocp.lan console-openshift-console.apps.lab.ocp.lan oauth-openshift.apps.lab.ocp.lan downloads-openshift-console.apps.lab.ocp.lan alertmanager-main-openshift-monitoring.apps.lab.ocp.lan grafana-openshift-monitoring.apps.lab.ocp.lan prometheus-k8s-openshift-monitoring.apps.lab.ocp.lan thanos-querier-openshift-monitoring.apps.lab.ocp.lan
+   192.168.0.96 ocp-svc api.lab.ocp.local console-openshift-console.apps.lab.ocp.local oauth-openshift.apps.lab.ocp.local downloads-openshift-console.apps.lab.ocp.local alertmanager-main-openshift-monitoring.apps.lab.ocp.local grafana-openshift-monitoring.apps.lab.ocp.local prometheus-k8s-openshift-monitoring.apps.lab.ocp.local thanos-querier-openshift-monitoring.apps.lab.ocp.local
    ```
 
-1. Navigate to the [OpenShift Console URL](https://console-openshift-console.apps.lab.ocp.lan) and log in as the 'admin' user
+1. Navigate to the [OpenShift Console URL](https://console-openshift-console.apps.lab.ocp.local) and log in as the 'admin' user
 
    > You will get self signed certificate warnings that you can ignore
    > If you need to login as kubeadmin and need to the password again you can retrieve it with: `cat ~/ocp-install/auth/kubeadmin-password`
