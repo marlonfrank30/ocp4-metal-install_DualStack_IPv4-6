@@ -256,6 +256,7 @@
    > At the moment DNS will still be pointing to the LAN DNS server. You can see this by testing with `dig ocp.lan`.
 
    Change the LAN nic (ens192) to use 127.0.0.1 for DNS AND ensure `Ignore automatically Obtained DNS parameters` is ticked
+   Change the LAN nic (ens192) to use ::1 for DNS AND ensure `Ignore automatically Obtained DNS parameters` is ticked
 
    ```bash
    nmtui-edit ens192
