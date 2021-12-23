@@ -1,6 +1,6 @@
 $TTL    604800
 @       IN      SOA     ocp-svc.ocp.local. contact.ocp.local (
-           21122300     ; Serial
+                 25     ; Serial
              604800     ; Refresh
               86400     ; Retry
             2419200     ; Expire
@@ -39,11 +39,11 @@ worker5.cluster.ocp.local.              IN      AAAA      fd00::28
 worker6.cluster.ocp.local.              IN      AAAA      fd00::29
 
 
+
 ; OpenShift Internal - Load balancer
 api.cluster.ocp.local.                  IN      A         10.1.10.1
 api-int.cluster.ocp.local.              IN      A         10.1.10.1
 *.apps.cluster.ocp.local.               IN      A         10.1.10.1
-
 
 ; ETCD Cluster
 etcd-0.cluster.ocp.local.               IN      A         10.1.10.21
@@ -60,6 +60,3 @@ _etcd-server-ssl._tcp.cluster.ocp.local.    86400     IN    SRV     0    10    2
 
 oauth-openshift.apps.cluster.ocp.local.               IN     A        10.1.10.1
 console-openshift-console.apps.cluster.ocp.local.     IN     A        10.1.10.1
-
-
-#/64 equivalent of /24   fd00:0000:0000:0000     0000:0000:0000:0020
