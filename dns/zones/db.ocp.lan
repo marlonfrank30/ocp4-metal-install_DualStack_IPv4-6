@@ -1,6 +1,6 @@
 $TTL    604800
-@       IN      SOA     ocp-svc.ocp.lan. contact.ocp.lan (
-                  1     ; Serial
+@       IN      SOA     ocp-svc.ocp.local. contact.ocp.local (
+                 21     ; Serial
              604800     ; Refresh
               86400     ; Retry
             2419200     ; Expire
@@ -8,34 +8,89 @@ $TTL    604800
 )
         IN      NS      ocp-svc
 
-ocp-svc.ocp.lan.          IN      A       192.168.22.1
+ocp-svc.ocp.local.                      IN      A        10.1.10.5
+podman.ocp.local.                       IN      A        10.1.10.5
 
 ; Temp Bootstrap Node
-ocp-bootstrap.lab.ocp.lan.        IN      A      192.168.22.200
+ocp-bootstrap.cluster.ocp.local.        IN      A         10.1.10.20
+ocp-bootstrap.cluster.ocp.local.        IN      AAAA      2601:680:c200:44e1::20
+ocp-bootstrap.beta.ocp.local.           IN      A         10.1.10.30
+ocp-bootstrap.beta.ocp.local.           IN      AAAA      2601:680:c200:44e1::30
 
 ; Control Plane Nodes
-ocp-cp-1.lab.ocp.lan.         IN      A      192.168.22.201
-ocp-cp-2.lab.ocp.lan.         IN      A      192.168.22.202
-ocp-cp-3.lab.ocp.lan.         IN      A      192.168.22.203
+leader1.cluster.ocp.local.              IN      A         10.1.10.21
+leader2.cluster.ocp.local.              IN      A         10.1.10.22
+leader3.cluster.ocp.local.              IN      A         10.1.10.23
+leader1.cluster.ocp.local.              IN      AAAA      2601:680:c200:44e1::21
+leader2.cluster.ocp.local.              IN      AAAA      2601:680:c200:44e1::22
+leader3.cluster.ocp.local.              IN      AAAA      2601:680:c200:44e1::23
+leader1.beta.ocp.local.                 IN      A         10.1.10.31
+leader2.beta.ocp.local.                 IN      A         10.1.10.32
+leader3.beta.ocp.local.                 IN      A         10.1.10.33
+leader1.beta.ocp.local.                 IN      AAAA      2601:680:c200:44e1::31
+leader2.beta.ocp.local.                 IN      AAAA      2601:680:c200:44e1::32
+leader3.beta.ocp.local.                 IN      AAAA      2601:680:c200:44e1::33
+
 
 ; Worker Nodes
-ocp-w-1.lab.ocp.lan.        IN      A      192.168.22.211
-ocp-w-2.lab.ocp.lan.        IN      A      192.168.22.212
+worker1.cluster.ocp.local.              IN      A         10.1.10.24
+worker2.cluster.ocp.local.              IN      A         10.1.10.25
+worker3.cluster.ocp.local.              IN      A         10.1.10.26
+worker4.cluster.ocp.local.              IN      A         10.1.10.27
+worker5.cluster.ocp.local.              IN      A         10.1.10.28
+worker6.cluster.ocp.local.              IN      A         10.1.10.29
+worker1.cluster.ocp.local.              IN      AAAA      2601:680:c200:44e1::24
+worker2.cluster.ocp.local.              IN      AAAA      2601:680:c200:44e1::25
+worker3.cluster.ocp.local.              IN      AAAA      2601:680:c200:44e1::26
+worker4.cluster.ocp.local.              IN      AAAA      2601:680:c200:44e1::27
+worker5.cluster.ocp.local.              IN      AAAA      2601:680:c200:44e1::28
+worker6.cluster.ocp.local.              IN      AAAA      2601:680:c200:44e1::29
+worker1.beta.ocp.local.                 IN      A         10.1.10.34
+worker2.beta.ocp.local.                 IN      A         10.1.10.35
+worker3.beta.ocp.local.                 IN      A         10.1.10.36
+worker4.beta.ocp.local.                 IN      A         10.1.10.37
+worker5.beta.ocp.local.                 IN      A         10.1.10.38
+worker6.beta.ocp.local.                 IN      A         10.1.10.39
+worker1.beta.ocp.local.                 IN      AAAA      2601:680:c200:44e1::34
+worker2.beta.ocp.local.                 IN      AAAA      2601:680:c200:44e1::35
+worker3.beta.ocp.local.                 IN      AAAA      2601:680:c200:44e1::36
+worker4.beta.ocp.local.                 IN      AAAA      2601:680:c200:44e1::37
+worker5.beta.ocp.local.                 IN      AAAA      2601:680:c200:44e1::38
+worker6.beta.ocp.local.                 IN      AAAA      2601:680:c200:44e1::39
+
+
 
 ; OpenShift Internal - Load balancer
-api.lab.ocp.lan.        IN    A    192.168.22.1
-api-int.lab.ocp.lan.    IN    A    192.168.22.1
-*.apps.lab.ocp.lan.     IN    A    192.168.22.1
+api.cluster.ocp.local.                  IN      A         10.1.10.5
+api-int.cluster.ocp.local.              IN      A         10.1.10.5
+*.apps.cluster.ocp.local.               IN      A         10.1.10.5
+api.beta.ocp.local.                     IN      A         10.1.10.6
+api-int.beta.ocp.local.                 IN      A         10.1.10.6
+*.apps.beta.ocp.local.                  IN      A         10.1.10.6
 
 ; ETCD Cluster
-etcd-0.lab.ocp.lan.    IN    A     192.168.22.201
-etcd-1.lab.ocp.lan.    IN    A     192.168.22.202
-etcd-2.lab.ocp.lan.    IN    A     192.168.22.203
+etcd-0.cluster.ocp.local.               IN      A         10.1.10.21
+etcd-1.cluster.ocp.local.               IN      A         10.1.10.22
+etcd-2.cluster.ocp.local.               IN      A         10.1.10.23
+etcd-0.cluster.ocp.local.               IN      AAAA      2601:680:c200:44e1::21
+etcd-1.cluster.ocp.local.               IN      AAAA      2601:680:c200:44e1::22
+etcd-2.cluster.ocp.local.               IN      AAAA      2601:680:c200:44e1::23
+etcd-0.beta.ocp.local.                  IN      A         10.1.10.31
+etcd-1.beta.ocp.local.                  IN      A         10.1.10.32
+etcd-2.beta.ocp.local.                  IN      A         10.1.10.33
+etcd-0.beta.ocp.local.                  IN      AAAA      2601:680:c200:44e1::31
+etcd-1.beta.ocp.local.                  IN      AAAA      2601:680:c200:44e1::32
+etcd-2.beta.ocp.local.                  IN      AAAA      2601:680:c200:44e1::33
 
-; OpenShift Internal SRV records (cluster name = lab)
-_etcd-server-ssl._tcp.lab.ocp.lan.    86400     IN    SRV     0    10    2380    etcd-0.lab
-_etcd-server-ssl._tcp.lab.ocp.lan.    86400     IN    SRV     0    10    2380    etcd-1.lab
-_etcd-server-ssl._tcp.lab.ocp.lan.    86400     IN    SRV     0    10    2380    etcd-2.lab
+; OpenShift Internal SRV records (cluster name = cluster)
+_etcd-server-ssl._tcp.cluster.ocp.local.    86400     IN    SRV     0    10    2380    etcd-0.cluster
+_etcd-server-ssl._tcp.cluster.ocp.local.    86400     IN    SRV     0    10    2380    etcd-1.cluster
+_etcd-server-ssl._tcp.cluster.ocp.local.    86400     IN    SRV     0    10    2380    etcd-2.cluster
+_etcd-server-ssl._tcp.beta.ocp.local.       86400     IN    SRV     0    10    2380    etcd-0.cluster
+_etcd-server-ssl._tcp.beta.ocp.local.       86400     IN    SRV     0    10    2380    etcd-1.cluster
+_etcd-server-ssl._tcp.beta.ocp.local.       86400     IN    SRV     0    10    2380    etcd-2.cluster
 
-oauth-openshift.apps.lab.ocp.lan.     IN     A     192.168.22.1
-console-openshift-console.apps.lab.ocp.lan.     IN     A     192.168.22.1
+oauth-openshift.apps.cluster.ocp.local.               IN     A        10.1.10.5
+console-openshift-console.apps.cluster.ocp.local.     IN     A        10.1.10.5
+oauth-openshift.apps.beta.ocp.local.                  IN     A        10.1.10.6
+console-openshift-console.apps.beta.ocp.local.        IN     A        10.1.10.6
