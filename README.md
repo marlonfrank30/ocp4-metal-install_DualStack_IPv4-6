@@ -221,19 +221,6 @@
    ```bash
    cat /proc/sys/net/ipv4/ip_forward
    sysctl net/ipv6/conf/all/forwarding=1
-   modprobe br_netfilter
-   cat <<EOF > /etc/sysctl.d/k8s.conf
-   net.bridge.bridge-nf-call-ip6tables = 1
-   net.bridge.bridge-nf-call-iptables = 1
-   EOF
-   sysctl --system
- 
-   cat <<EOF >>/etc/sysctl.conf
-   net.ipv4.ip_forward=1
-   net.ipv6.conf.all.forwarding=1
-   EOF
- 
-   sysctl -p
    ```
 
 1. Install and configure BIND DNS
