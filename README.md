@@ -205,7 +205,7 @@
    #Reload firewall config
    ```
    
-1.  Optional: Set **allow ALL** for your lab environments if security is not a concern allowing **ALL** inbound and outbound flow 
+   Optional: Set **allow ALL** for your lab environments if security is not a concern allowing **ALL** inbound and outbound flow 
    (skip more specific fw ports in the upcoming sessions below).
   
    ```bash
