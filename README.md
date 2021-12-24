@@ -185,7 +185,7 @@
    firewall-cmd --get-active-zones
    ```
 
-   Set masquerading (source-nat) on the both zones.
+1. Set masquerading (source-nat) on the both zones.
 
    So to give a quick example of source-nat - for packets leaving the external interface, which in this case is ens192 - after they have been routed they will have their source address altered to the interface address of ens192 so that return packets can find their way back to this interface where the reverse will happen.
 
@@ -194,7 +194,8 @@
    firewall-cmd --zone=internal --add-masquerade --permanent
    ```
  
-    In case  your ISP only provides a single Public IP address, NAT will be required for IPv4 and IPv6. Set bidirection NAT for your lab environments if security is not a concern allowing all inbound and outbound flows.
+1.  In case  your ISP only provides a single Public IP address, NAT will be required for IPv4 and IPv6. 
+    Set bidirection NAT for your lab environments if security is not a      concern allowing all inbound and outbound flows.
  
    ```bash
    sudo firewall-cmd --zone=external --add-rich-rule='rule family="ipv4" source address="0.0.0.0/0" masquerade' --permanent
@@ -204,7 +205,8 @@
    #Reload firewall config
    ```
    
-    Optional: Set **allow ALL** for your lab environments if security is not a concern allowing **ALL** inbound and outbound flow (skip more specific fw ports in the upcoming sessions below).
+1.  Optional: Set **allow ALL** for your lab environments if security is not a concern allowing **ALL** inbound and outbound flow 
+    (skip more specific fw ports in the upcoming sessions below).
   
   ```bash
    sudo firewall-cmd --zone=external --add-rich-rule='rule family="ipv4" source address="0.0.0.0/0" accept' --permanent
@@ -217,13 +219,12 @@
    firewall-cmd --reload
    ```
 
-   Check the current settings of each zone
+1.  Check the current settings of each zone
 
    ```bash
    firewall-cmd --list-all --zone=internal
    firewall-cmd --list-all --zone=external
    ```
-
 
    When masquerading is enabled so is ip forwarding which basically makes this host a router. Check:
 
