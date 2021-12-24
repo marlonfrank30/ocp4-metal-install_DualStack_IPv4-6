@@ -213,13 +213,13 @@
    sudo firewall-cmd --zone=internal --add-rich-rule='rule family="ipv4" source address="0.0.0.0/0" accept' --permanent
    sudo firewall-cmd --zone=external --add-rich-rule='rule family="ipv6" source address="::0/0" accept' --permanent
    sudo firewall-cmd --zone=internal --add-rich-rule='rule family="ipv6" source address="::0/0" accept' --permanent
-   #Reload firewall config
-
+   ```
+   
    ```bash
    firewall-cmd --reload
    ```
 
-17.  Check the current settings of each zone
+1.  Check the current settings of each zone
 
    ```bash
    firewall-cmd --list-all --zone=internal
@@ -233,7 +233,7 @@
    sysctl net/ipv6/conf/all/forwarding=1
    ```
 
-1. Install and configure BIND DNS
+1.  Install and configure BIND DNS
 
    Install
 
@@ -285,7 +285,7 @@
    dig -x 10.1.10.20
    ```
 
-1. Install & configure DHCP
+1.  Install & configure DHCP
 
    Install the DHCP Server
 
@@ -314,7 +314,7 @@
    systemctl status dhcpd
    ```
 
-1. Install & configure Apache Web Server
+1.  Install & configure Apache Web Server
 
    Install Apache
 
@@ -349,7 +349,7 @@
    curl localhost:8080
    ```
 
-1. Install & configure HAProxy
+1.  Install & configure HAProxy
 
    Install HAProxy
 
@@ -396,7 +396,7 @@
    systemctl status haproxy
    ```
 
-1. Install and configure NFS for the OpenShift Registry. It is a requirement to provide storage for the Registry, emptyDir can be specified if necessary.
+1.  Install and configure NFS for the OpenShift Registry. It is a requirement to provide storage for the Registry, emptyDir can be specified if necessary.
 
    Install NFS Server
 
