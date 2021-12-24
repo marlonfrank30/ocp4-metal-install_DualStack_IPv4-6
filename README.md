@@ -219,7 +219,7 @@
    firewall-cmd --reload
    ```
 
-1.  Check the current settings of each zone
+17.  Check the current settings of each zone
 
    ```bash
    firewall-cmd --list-all --zone=internal
