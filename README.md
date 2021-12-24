@@ -194,7 +194,7 @@
    firewall-cmd --zone=internal --add-masquerade --permanent
    ```
  
-    Set bidirection NAT for your lab environments if security is not a concern allow all inbound and outbound flow (skip more specific fw ports in the upcoming sessions below).
+    In case  your ISP only provides a single Public IP address, NAT will be required for IPv4 and IPv6. Set bidirection NAT for your lab environments if security is not a concern allowing all inbound and outbound flows.
  
    ```bash
    sudo firewall-cmd --zone=external --add-rich-rule='rule family="ipv4" source address="0.0.0.0/0" masquerade' --permanent
@@ -204,7 +204,7 @@
    #Reload firewall config
    ```
    
-    Set allow ALL for your lab environments if security is not a concern allow all inbound and outbound flow (skip more specific fw ports in the upcoming sessions below).
+    Optional: Set **allow ALL** for your lab environments if security is not a concern allowing **ALL** inbound and outbound flow (skip more specific fw ports in the upcoming sessions below).
   
   ```bash
    sudo firewall-cmd --zone=external --add-rich-rule='rule family="ipv4" source address="0.0.0.0/0" accept' --permanent
