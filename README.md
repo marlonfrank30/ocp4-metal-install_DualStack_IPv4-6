@@ -206,9 +206,9 @@
    ```
    
 1.  Optional: Set **allow ALL** for your lab environments if security is not a concern allowing **ALL** inbound and outbound flow 
-    (skip more specific fw ports in the upcoming sessions below).
+   (skip more specific fw ports in the upcoming sessions below).
   
-  ```bash
+   ```bash
    sudo firewall-cmd --zone=external --add-rich-rule='rule family="ipv4" source address="0.0.0.0/0" accept' --permanent
    sudo firewall-cmd --zone=internal --add-rich-rule='rule family="ipv4" source address="0.0.0.0/0" accept' --permanent
    sudo firewall-cmd --zone=external --add-rich-rule='rule family="ipv6" source address="::0/0" accept' --permanent
