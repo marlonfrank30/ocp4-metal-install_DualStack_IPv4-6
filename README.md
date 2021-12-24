@@ -201,6 +201,10 @@
    sudo firewall-cmd --zone=internal --add-rich-rule='rule family="ipv4" source address="0.0.0.0/0" accept' --permanent
    sudo firewall-cmd --zone=external --add-rich-rule='rule family="ipv6" source address="::0/0" accept' --permanent
    sudo firewall-cmd --zone=internal --add-rich-rule='rule family="ipv6" source address="::0/0" accept' --permanent
+   sudo firewall-cmd --zone=external --add-rich-rule='rule family="ipv6" source address="::0/0" masquerade' --permanent
+   sudo firewall-cmd --zone=internal --add-rich-rule='rule family="ipv6" source address="::0/0" masquerade' --permanent
+   sudo firewall-cmd --zone=external --add-rich-rule='rule family="ipv6" source address="0/0" accept' --permanent
+   sudo firewall-cmd --zone=internal --add-rich-rule='rule family="ipv6" source address="0/0" accept' --permanent
    ```
    Reload firewall config
 
