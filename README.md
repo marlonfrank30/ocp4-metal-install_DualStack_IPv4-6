@@ -732,7 +732,14 @@
    oc apply -f https://openebs.github.io/charts/openebs-operator.yaml
    oc adm policy add-scc-to-user privileged -z openebs-maya-operator -n openebs
    oc adm policy add-scc-to-group anyuid system:serviceaccounts:openebs
-   oc patch storageclass openebs-hostpath -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
+      oc patch storageclass openebs-hostpath -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
    oc get storageclass -n openebs
    
    ```   
+
+for openebs if you see the following error message, it needs to add the permission hostmount-anyuid to the namespace being used by the fluentd 
+[provider "anyuid": Forbidden: not usable by user or serviceaccount, provider "nonroot": Forbidden: not usable by user or serviceaccount, provider "hostmount-anyuid": Forbidden: not usable by user or serviceaccount, provider "machine-api-termination-handler": Forbidden: not usable by user or serviceaccount, provider "hostnetwork": Forbidden: not usable by user or serviceaccount, provider "hostaccess": Forbidden: not usable by user or serviceaccount, spec.containers[0].securityContext.runAsUser: Invalid value: 2000: must be in the ranges: [1000650000, 1000659999], provider "node-exporter": Forbidden: not usable by user or serviceaccount, provider "privileged": Forbidden: not usable by user or serviceaccount]
+
+
+oc adm policy add-scc-to-user hostmount-anyuid -n spk-utilities -z default
+   
