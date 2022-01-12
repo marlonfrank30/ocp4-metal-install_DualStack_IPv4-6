@@ -731,7 +731,7 @@
    ```bash
    oc apply -f https://openebs.github.io/charts/openebs-operator.yaml
    oc adm policy add-scc-to-user privileged -z openebs-maya-operator -n openebs
-   oc adm policy add-scc-to-group anyuid system:serviceaccounts:openebs
+   oc adm policy add-scc-to-group anyuid system:serviceaccounts:openebs -n openebs
    oc adm policy add-scc-to-user hostmount-anyuid -n spk-utilities -z default
    oc patch storageclass openebs-hostpath -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
    oc get storageclass -n openebs
