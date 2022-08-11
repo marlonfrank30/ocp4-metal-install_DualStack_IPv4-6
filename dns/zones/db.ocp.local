@@ -60,3 +60,5 @@ _etcd-server-ssl._tcp.cluster.ocp.local.    86400     IN    SRV     0    10    2
 
 oauth-openshift.apps.cluster.ocp.local.               IN     A        10.1.10.1
 console-openshift-console.apps.cluster.ocp.local.     IN     A        10.1.10.1
+oauth-openshift.apps.cluster.ocp.local.               IN     AAAA     fd00::1
+console-openshift-console.apps.cluster.ocp.local.    IN     AAAA     fd00::1
